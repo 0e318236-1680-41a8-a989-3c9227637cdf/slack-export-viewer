@@ -19,10 +19,10 @@ long_description = read('README.md')
 setup(
     name="slack-export-viewer",
     version=slackviewer.__version__,
-    url='https://github.com/hfaran/slack-export-viewer',
+    url='https://github.com/mcoster/slack-export-viewer',
     license='MIT License',
-    author='Hamza Faran',
-    author_email='hamzafaran@outlook.com',
+    author='Mark Coster',
+    author_email='m.coster@griffith.edu.au',
     description=('Slack Export Archive Viewer'),
     long_description=long_description,
     packages=["slackviewer"],
