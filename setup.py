@@ -25,7 +25,7 @@ setup(
     author_email='m.coster@griffith.edu.au',
     description=('Slack Export Archive Viewer'),
     long_description=long_description,
-    packages=["slackviewer"],
+    packages=find_packages(),
     install_requires = install_requires,
     entry_points={'console_scripts': [
         'slack-export-viewer = slackviewer.main:main'
