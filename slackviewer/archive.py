@@ -15,17 +15,12 @@ def compile_channels(path, user_data, channel_data):
     channels = get_channel_list(path)
     chats = {}
     for channel in channels:
-        channel_dir_path = os.path.join(path, channel)
-        messages = []
-        day_files = glob.glob(os.path.join(channel_dir_path, "*.json"))
-        if not day_files:
-            continue
-        for day in sorted(day_files):
-            with open(os.path.join(path, day)) as f:
-                day_messages = json.load(f)
-                messages.extend([Message(user_data, channel_data, d) for d in
-                                 day_messages])
-        chats[channel] = messages
+        channel_dir_path = os.path.join(path, "channels")
+        with open(os.path.join(channel_dir_path, channel + ".json")) as f:
+            json_messages = json.load(f)
+            messages = [Message(user_data, channel_data, d) for d in
+                                 json_messages]
+        chats[channel] = messages[::-1]
     return chats
 
 
