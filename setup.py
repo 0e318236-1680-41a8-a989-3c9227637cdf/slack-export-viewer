@@ -1,7 +1,7 @@
 import os
 import codecs
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 import slackviewer
 
